@@ -1,41 +1,161 @@
-# MediaPipe Tasks Pose Landmark Detection Android Demo
+# Krida AI – Athlete Performance & Fitness Analysis System
 
-### Overview
+---
 
-This is a camera app that can detects landmarks on a person either from continuous camera frames seen by your device's back camera, an image, or a video from the device's gallery using a custom **task** file.
+## 1. Overview
 
-The task file is downloaded by a Gradle script when you build and run the app. You don't need to do any additional steps to download task files into the project explicitly unless you wish to use your own landmark detection task. If you do use your own task file, place it into the app's *assets* directory.
+Krida AI is a native Android application built using Kotlin that performs real-time athlete performance analysis using on-device computer vision and sensor fusion.
 
-This application should be run on a physical Android device to take advantage of the camera.
+The system leverages MediaPipe Pose Landmarker for skeletal tracking and integrates inertial sensor data to evaluate athletic performance across multiple dimensions. The application is designed for high-density, real-world environments where external hardware is unavailable and network conditions may be unreliable.
 
-![Pose Landmarker Demo](pose_landmarker.png?raw=true "Pose Landmarker Demo")
-[Public domain video from Lance Foss](https://www.youtube.com/watch?v=KALIKOd1pbA)
+---
 
-## Build the demo using Android Studio
+## 2. System Architecture
 
-### Prerequisites
+| Layer                  | Description                                                                 |
+|-----------------------|-----------------------------------------------------------------------------|
+| Input Layer           | Camera frames + device sensors (accelerometer, gyroscope)                  |
+| Perception Layer      | MediaPipe pose landmark detection (33 keypoints)                           |
+| Processing Layer      | Joint angle computation, motion analysis, Kalman filtering                 |
+| Fusion Layer          | Sensor fusion (vision + IMU data)                                          |
+| Analytics Layer       | Performance metric evaluation (8 categories)                               |
+| Output Layer          | Real-time feedback, rep counting, posture analysis                         |
 
-*   The **[Android Studio](https://developer.android.com/studio/index.html)** IDE. This sample has been tested on Android Studio Dolphin.
+---
 
-*   A physical Android device with a minimum OS version of SDK 24 (Android 7.0 -
-    Nougat) with developer mode enabled. The process of enabling developer mode
-    may vary by device.
+## 3. Core Capabilities
 
-### Building
+### 3.1 Real-Time Pose Estimation
+- Detects 33 body landmarks using MediaPipe Pose Landmarker  
+- Processes continuous camera frames with optimized on-device inference  
+- Maintains low-latency performance suitable for live feedback systems  
 
-*   Open Android Studio. From the Welcome screen, select Open an existing
-    Android Studio project.
+### 3.2 Joint Angle Computation
 
-*   From the Open File or Project window that appears, navigate to and select
-    the mediapipe/examples/pose_landmarker/android directory. Click OK. You may
-    be asked if you trust the project. Select Trust.
+Joint angles are computed dynamically using landmark coordinates:
 
-*   If it asks you to do a Gradle Sync, click OK.
+| Joint        | Landmarks Used                     | Purpose                              |
+|--------------|----------------------------------|--------------------------------------|
+| Elbow        | Shoulder–Elbow–Wrist             | Arm movement tracking                |
+| Knee         | Hip–Knee–Ankle                   | Squat depth and leg extension        |
+| Hip          | Shoulder–Hip–Knee                | Body posture and bending analysis    |
+| Shoulder     | Left–Right Shoulder alignment    | Symmetry and posture correction      |
+| Spine        | Head–Shoulder–Hip                | Overall posture and stability        |
 
-*   With your Android device connected to your computer and developer mode
-    enabled, click on the green Run arrow in Android Studio.
+Applications include:
+- Squat depth validation  
+- Push-up form correction  
+- Posture alignment analysis  
+- Range-of-motion tracking  
 
-### Models used
+---
 
-Downloading, extraction, and placing the models into the *assets* folder is
-managed automatically by the **download.gradle** file.
+## 4. Performance Evaluation Model
+
+The system evaluates athletes across the following categories:
+
+| Category                     | Methodology                                                                 |
+|----------------------------|------------------------------------------------------------------------------|
+| Speed & Acceleration       | Displacement over time + accelerometer fusion                               |
+| Strength & Endurance       | Repetition counting + fatigue detection                                     |
+| Explosiveness              | Velocity spikes and rapid force generation                                  |
+| Stamina                    | Sustained activity tracking and efficiency degradation                      |
+| Agility & Quickness        | Directional changes and transition speed                                    |
+| Mobility & Flexibility     | Joint range of motion analysis                                              |
+| Balance & Stability        | Center-of-mass estimation and sway detection                                |
+| Reaction Time & Coordination | Response latency and limb synchronization                                  |
+
+---
+
+## 5. Sensor Fusion & Motion Intelligence
+
+### 5.1 Sensors Utilized
+
+| Sensor         | Role                                      |
+|----------------|-------------------------------------------|
+| Accelerometer  | Linear motion and displacement tracking   |
+| Gyroscope      | Orientation and angular velocity          |
+
+### 5.2 Kalman Filter Integration
+
+- Combines pose estimation data with IMU sensor readings  
+- Reduces noise and improves motion accuracy  
+- Enables reliable detection of:
+  - Sprint acceleration  
+  - Explosive movements  
+  - Rapid directional transitions  
+
+---
+
+## 6. Real-Time Processing Pipeline
+
+1. Camera frame acquisition  
+2. Pose landmark extraction (MediaPipe)  
+3. Joint angle computation  
+4. Sensor data acquisition (IMU)  
+5. Sensor fusion via Kalman filtering  
+6. Performance metric computation  
+7. Real-time feedback rendering  
+
+---
+
+## 7. Supported Activities
+
+- Push-ups (form analysis + repetition counting)  
+- Squats (depth + posture tracking)  
+- Sprint and acceleration analysis  
+- General athletic movement evaluation  
+
+---
+
+## 8. Backend & Tamper-Proof Data Handling
+
+To ensure integrity and prevent manipulation of recorded performance data, the system incorporates a structured processing approach:
+
+### 8.1 Chunk-Based Data Processing (FFmpeg)
+
+- Recorded sessions are segmented into **small video/data chunks** using FFmpeg  
+- Each chunk is processed independently to avoid full-file manipulation  
+- Enables efficient streaming, storage, and verification  
+
+### 8.2 Tamper Resistance Strategy
+
+| Mechanism                     | Description                                                                 |
+|------------------------------|-----------------------------------------------------------------------------|
+| Chunk Segmentation           | Prevents full-sequence editing without detection                           |
+| Sequential Processing        | Maintains ordered data integrity                                           |
+| Frame-Level Consistency      | Detects anomalies in motion continuity                                     |
+| Reprocessing Validation      | Allows recomputation of metrics from raw chunks                            |
+
+### 8.3 Benefits
+
+- Reduces risk of performance spoofing  
+- Ensures reliability of athlete metrics  
+- Enables scalable backend processing pipelines  
+
+---
+
+## 9. Technology Stack
+
+| Category        | Technology Used                          |
+|-----------------|------------------------------------------|
+| Language        | Kotlin                                   |
+| Platform        | Native Android                           |
+| AI/ML           | MediaPipe Pose Landmarker                |
+| Sensors         | Accelerometer, Gyroscope                 |
+| Processing      | On-device inference, Kalman Filtering    |
+| Media Handling  | FFmpeg (chunk-based processing)          |
+
+---
+
+## 10. Requirements
+
+- Android device (SDK 24+)  
+- Camera access required  
+- Recommended: Physical device for real-time performance  
+
+---
+
+## 11. Summary
+
+Krida AI transforms a smartphone into a portable athlete performance analysis system by combining computer vision, sensor fusion, and real-time analytics. The system is designed to operate efficiently on-device while maintaining data integrity and reliability for performance evaluation.
