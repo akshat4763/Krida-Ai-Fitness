@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Required by original MediaPipe sample info_bottom_sheet.xml (do not remove) -->
+    <string-array name="models_spinner_titles">
+        <item>Full</item>
+        <item>Lite</item>
+        <item>Heavy</item>
+    </string-array>
+
+    <string-array name="delegate_spinner_titles">
+        <item>CPU</item>
+        <item>GPU</item>
+    </string-array>
+</resources>

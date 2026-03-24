@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Required by original MediaPipe sample (do not remove) -->
+    <color name="mp_color_primary">#00E5FF</color>
+    <color name="mp_color_primary_dark">#00B8D4</color>
+    <color name="mp_color_primary_variant">#00B8D4</color>
+    <color name="mp_color_secondary">#1A1A1A</color>
+    <color name="mp_color_secondary_variant">#252525</color>
+    <color name="mp_color_error">#F44336</color>
+    <color name="mp_color_on_primary">#000000</color>
+    <color name="mp_color_on_secondary">#FFFFFF</color>
+    <color name="mp_color_on_background">#FFFFFF</color>
+    <color name="mp_color_on_surface">#FFFFFF</color>
+    <color name="mp_color_on_error">#FFFFFF</color>
+
+    <!-- Required by original sample's bottom sheet -->
+    <color name="bottom_sheet_background">#1A1A1A</color>
+    <color name="bottom_sheet_text_color">#FFFFFF</color>
+
+    <!-- App backgrounds -->
+    <color name="background_dark">#0D0D0D</color>
+    <color name="surface_dark">#1A1A1A</color>
+    <color name="card_info">#161616</color>
+    <color name="banner_bg">#111820</color>
+
+    <!-- ── 8 category card colors ─────────────────────────── -->
+    <!-- 1. Speed & Acceleration -->
+    <color name="card_speed">#0D1F33</color>
+    <!-- 2. Strength & Endurance (push-ups + squats) -->
+    <color name="card_strength">#0B2A14</color>
+    <color name="card_pushup">#0D1B4B</color>
+    <color name="card_squat">#0B3320</color>
+    <color name="card_strength_btn">#1B5E20</color>
+    <!-- 3. Explosive Power -->
+    <color name="card_power">#2C1810</color>
+    <!-- 4. Endurance & Stamina -->
+    <color name="card_endurance">#0A1A2E</color>
+    <!-- 5. Agility & Quickness -->
+    <color name="card_agility">#1A0D2E</color>
+    <!-- 6. Mobility & Flexibility -->
+    <color name="card_mobility">#0A1E1C</color>
+    <!-- 7. Balance & Stability -->
+    <color name="card_balance">#1E1A0A</color>
+    <!-- 8. Reaction & Coordination -->
+    <color name="card_reaction">#1E0A0A</color>
+    <!-- Sprint (used in old home) -->
+    <color name="card_sprint">#3B1A00</color>
+
+    <!-- Text -->
+    <color name="white">#FFFFFF</color>
+    <color name="white_alpha">#CCFFFFFF</color>
+    <color name="text_secondary">#777777</color>
+
+    <!-- Status colors -->
+    <color name="color_good">#4CAF50</color>
+    <color name="color_warning">#FF9800</color>
+    <color name="color_error">#F44336</color>
+
+    <!-- Button colors -->
+    <color name="button_reset">#252525</color>
+</resources>

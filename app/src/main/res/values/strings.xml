@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FitTracker AI</string>
+
+    <!-- ================================================================ -->
+    <!-- REQUIRED BY ORIGINAL MEDIAPIPE SAMPLE LAYOUTS (do not remove)    -->
+    <!-- fragment_gallery.xml, info_bottom_sheet.xml                       -->
+    <!-- ================================================================ -->
+    <string name="tv_gallery_placeholder">Please select an image or video</string>
+    <string name="alt_bottom_sheet_chevron">Expand or collapse bottom sheet</string>
+    <string name="label_inference_time">Inference Time</string>
+    <string name="label_pose_detection_confidence_threshold">Pose Detection Confidence Threshold</string>
+    <string name="label_pose_tracking_confidence_threshold">Pose Tracking Confidence Threshold</string>
+    <string name="label_pose_presence_confidence_threshold">Pose Presence Confidence Threshold</string>
+    <string name="alt_bottom_sheet_threshold_button_minus">Decrease threshold value</string>
+    <string name="alt_bottom_sheet_threshold_button_plus">Increase threshold value</string>
+    <string name="label_models">Model</string>
+    <string name="label_delegate">Delegate</string>
+
+    <!-- ================================================================ -->
+    <!-- FITNESS TRACKER HOME SCREEN                                       -->
+    <!-- ================================================================ -->
+
+    <!-- Banner -->
+    <string name="banner_title">YOUR FITNESS PROFILE</string>
+    <string name="banner_desc">8 categories - Complete each test to build your full athletic profile. Tap any card to learn more and start testing.</string>
+    <string name="label_performance_categories">PERFORMANCE CATEGORIES</string>
+
+    <!-- Shared labels -->
+    <string name="label_primary_goal">PRIMARY GOAL</string>
+    <string name="label_what_test">WHAT YOU\'LL TEST</string>
+    <string name="label_ready">READY</string>
+    <string name="label_soon">SOON</string>
+    <string name="label_coming_soon">COMING SOON</string>
+
+    <!-- 1. Speed -->
+    <string name="cat_speed_title">SPEED &amp; ACCELERATION</string>
+    <string name="cat_speed_sub">Sprint ability + explosiveness start</string>
+    <string name="cat_speed_goal">How fast you move and how quickly you reach top speed</string>
+    <string name="speed_test1">Sprint test (max speed over distance)</string>
+    <string name="speed_test2">0-10m acceleration power</string>
+    <string name="speed_test3">Time to peak speed (explosiveness)</string>
+    <string name="btn_start_sprint">START SPRINT TEST</string>
+
+    <!-- 2. Strength -->
+    <string name="cat_strength_title">STRENGTH &amp; ENDURANCE</string>
+    <string name="cat_strength_sub">Control + repetition strength</string>
+    <string name="cat_strength_goal">How strong and consistent your muscles are</string>
+    <string name="strength_test1">Push-ups (chest, triceps, shoulders)</string>
+    <string name="strength_test2">Squats (quads, glutes, core)</string>
+    <string name="strength_test3">Pull-ups - coming soon</string>
+    <string name="btn_start_strength">START STRENGTH TEST</string>
+
+    <!-- 3. Power -->
+    <string name="cat_power_title">EXPLOSIVE POWER</string>
+    <string name="cat_power_sub">Jumping + force generation</string>
+    <string name="cat_power_goal">How much power you can generate instantly</string>
+    <string name="power_test1">Vertical jump (lower body power)</string>
+    <string name="power_test2">Broad jump (horizontal force)</string>
+
+    <!-- 4. Endurance -->
+    <string name="cat_endurance_title">ENDURANCE &amp; STAMINA</string>
+    <string name="cat_endurance_sub">How long you can perform</string>
+    <string name="cat_endurance_goal">How long you can sustain performance</string>
+    <string name="endurance_test1">800m / 1600m timed run</string>
+    <string name="endurance_test2">Beep test (VO2 max estimation)</string>
+
+    <!-- 5. Agility -->
+    <string name="cat_agility_title">AGILITY &amp; QUICKNESS</string>
+    <string name="cat_agility_sub">Direction change + control</string>
+    <string name="cat_agility_goal">How fast and sharp your movements are</string>
+    <string name="agility_test1">Shuttle run (5m x 6 sprints)</string>
+    <string name="agility_test2">Direction change speed test</string>
+
+    <!-- 6. Mobility -->
+    <string name="cat_mobility_title">MOBILITY &amp; FLEXIBILITY</string>
+    <string name="cat_mobility_sub">Range of motion + injury prevention</string>
+    <string name="cat_mobility_goal">How freely your body can move</string>
+    <string name="mobility_test1">Sit and reach (hamstring + lower back)</string>
+    <string name="mobility_test2">Joint mobility assessment</string>
+
+    <!-- 7. Balance -->
+    <string name="cat_balance_title">BALANCE &amp; STABILITY</string>
+    <string name="cat_balance_sub">Control under movement</string>
+    <string name="cat_balance_goal">How well you control your body</string>
+    <string name="balance_test1">Single-leg balance (timed hold)</string>
+    <string name="balance_test2">Plank hold (core stability)</string>
+
+    <!-- 8. Reaction -->
+    <string name="cat_reaction_title">REACTION &amp; COORDINATION</string>
+    <string name="cat_reaction_sub">Brain + body connection</string>
+    <string name="cat_reaction_goal">How fast your mind and body respond</string>
+    <string name="reaction_test1">Reaction tap test (visual stimulus)</string>
+    <string name="reaction_test2">Coordination drill sequence</string>
+</resources>

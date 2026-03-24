@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="40dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="52dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FIT"
+                android:textSize="52sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:textColor="@color/mp_color_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRACKER"
+                android:textSize="52sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:textColor="@color/white"
+                android:layout_marginTop="-12dp" />
+
+            <View
+                android:layout_width="48dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/mp_color_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complete athletic performance assessment"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+        <!-- INTRO BANNER -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/banner_bg">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/banner_title"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.18"
+                    android:textColor="@color/mp_color_primary"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/banner_desc"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SECTION LABEL -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_performance_categories"
+            android:textSize="10sp"
+            android:letterSpacing="0.18"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="12dp" />
+
+        <!-- ============================================================ -->
+        <!-- 1. SPEED & ACCELERATION                                       -->
+        <!-- ============================================================ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_speed">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:textSize="28sp" android:textStyle="bold" android:textColor="@color/mp_color_primary" android:layout_marginRight="4dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginLeft="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_speed_title" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/white" android:letterSpacing="0.03"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_speed_sub" android:textSize="12sp" android:textColor="@color/white_alpha" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_ready" android:textSize="10sp" android:textColor="@color/mp_color_primary" android:background="@drawable/badge_bg_cyan" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#22FFFFFF" android:layout_marginTop="14dp" android:layout_marginBottom="14dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_primary_goal" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_speed_goal" android:textSize="13sp" android:textColor="@color/white" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:textStyle="italic"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_what_test" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary" android:layout_marginBottom="6dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="@color/mp_color_primary" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/speed_test1" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="@color/mp_color_primary" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/speed_test2" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="@color/mp_color_primary" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/speed_test3" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <Button android:layout_width="match_parent" android:layout_height="46dp" android:text="@string/btn_start_sprint" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/background_dark" android:backgroundTint="@color/mp_color_primary" android:layout_marginTop="16dp" android:stateListAnimator="@null" android:clickable="false" android:focusable="false"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ============================================================ -->
+        <!-- 2. STRENGTH & ENDURANCE                                       -->
+        <!-- ============================================================ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_strength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_strength">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" android:textSize="28sp" android:textStyle="bold" android:textColor="@color/color_good" android:layout_marginRight="4dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginLeft="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_strength_title" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/white" android:letterSpacing="0.03"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_strength_sub" android:textSize="12sp" android:textColor="@color/white_alpha" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_ready" android:textSize="10sp" android:textColor="@color/color_good" android:background="@drawable/badge_bg_green" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#22FFFFFF" android:layout_marginTop="14dp" android:layout_marginBottom="14dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_primary_goal" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_strength_goal" android:textSize="13sp" android:textColor="@color/white" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:textStyle="italic"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_what_test" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="@color/color_good" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strength_test1" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="@color/color_good" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strength_test2" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="@color/text_secondary" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strength_test3" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <Button android:layout_width="match_parent" android:layout_height="46dp" android:text="@string/btn_start_strength" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/white" android:backgroundTint="@color/card_strength_btn" android:layout_marginTop="16dp" android:stateListAnimator="@null" android:clickable="false" android:focusable="false"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ============================================================ -->
+        <!-- 3. EXPLOSIVE POWER                                            -->
+        <!-- ============================================================ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_power"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_power">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" android:textSize="28sp" android:textStyle="bold" android:textColor="@color/color_warning" android:layout_marginRight="4dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginLeft="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_power_title" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/white" android:letterSpacing="0.03"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_power_sub" android:textSize="12sp" android:textColor="@color/white_alpha" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_soon" android:textSize="10sp" android:textColor="@color/color_warning" android:background="@drawable/badge_bg_orange" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#22FFFFFF" android:layout_marginTop="14dp" android:layout_marginBottom="14dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_primary_goal" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_power_goal" android:textSize="13sp" android:textColor="@color/white" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:textStyle="italic"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_what_test" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="@color/color_warning" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_test1" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="@color/color_warning" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_test2" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <Button android:layout_width="match_parent" android:layout_height="46dp" android:text="@string/label_coming_soon" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/text_secondary" android:backgroundTint="@color/card_info" android:layout_marginTop="16dp" android:stateListAnimator="@null" android:clickable="false" android:focusable="false" android:alpha="0.6"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ============================================================ -->
+        <!-- 4. ENDURANCE & STAMINA                                        -->
+        <!-- ============================================================ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_endurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_endurance">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4" android:textSize="28sp" android:textStyle="bold" android:textColor="#4FC3F7" android:layout_marginRight="4dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginLeft="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_endurance_title" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/white" android:letterSpacing="0.03"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_endurance_sub" android:textSize="12sp" android:textColor="@color/white_alpha" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_soon" android:textSize="10sp" android:textColor="@color/color_warning" android:background="@drawable/badge_bg_orange" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#22FFFFFF" android:layout_marginTop="14dp" android:layout_marginBottom="14dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_primary_goal" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_endurance_goal" android:textSize="13sp" android:textColor="@color/white" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:textStyle="italic"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_what_test" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#4FC3F7" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/endurance_test1" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#4FC3F7" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/endurance_test2" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <Button android:layout_width="match_parent" android:layout_height="46dp" android:text="@string/label_coming_soon" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/text_secondary" android:backgroundTint="@color/card_info" android:layout_marginTop="16dp" android:stateListAnimator="@null" android:clickable="false" android:focusable="false" android:alpha="0.6"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ============================================================ -->
+        <!-- 5. AGILITY & QUICKNESS                                        -->
+        <!-- ============================================================ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_agility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_agility">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5" android:textSize="28sp" android:textStyle="bold" android:textColor="#CE93D8" android:layout_marginRight="4dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginLeft="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_agility_title" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/white" android:letterSpacing="0.03"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_agility_sub" android:textSize="12sp" android:textColor="@color/white_alpha" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_soon" android:textSize="10sp" android:textColor="@color/color_warning" android:background="@drawable/badge_bg_orange" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#22FFFFFF" android:layout_marginTop="14dp" android:layout_marginBottom="14dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_primary_goal" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_agility_goal" android:textSize="13sp" android:textColor="@color/white" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:textStyle="italic"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_what_test" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#CE93D8" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/agility_test1" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#CE93D8" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/agility_test2" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <Button android:layout_width="match_parent" android:layout_height="46dp" android:text="@string/label_coming_soon" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/text_secondary" android:backgroundTint="@color/card_info" android:layout_marginTop="16dp" android:stateListAnimator="@null" android:clickable="false" android:focusable="false" android:alpha="0.6"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ============================================================ -->
+        <!-- 6. MOBILITY & FLEXIBILITY                                     -->
+        <!-- ============================================================ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_mobility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_mobility">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="6" android:textSize="28sp" android:textStyle="bold" android:textColor="#80CBC4" android:layout_marginRight="4dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginLeft="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_mobility_title" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/white" android:letterSpacing="0.03"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_mobility_sub" android:textSize="12sp" android:textColor="@color/white_alpha" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_soon" android:textSize="10sp" android:textColor="@color/color_warning" android:background="@drawable/badge_bg_orange" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#22FFFFFF" android:layout_marginTop="14dp" android:layout_marginBottom="14dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_primary_goal" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_mobility_goal" android:textSize="13sp" android:textColor="@color/white" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:textStyle="italic"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_what_test" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#80CBC4" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobility_test1" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#80CBC4" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobility_test2" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <Button android:layout_width="match_parent" android:layout_height="46dp" android:text="@string/label_coming_soon" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/text_secondary" android:backgroundTint="@color/card_info" android:layout_marginTop="16dp" android:stateListAnimator="@null" android:clickable="false" android:focusable="false" android:alpha="0.6"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ============================================================ -->
+        <!-- 7. BALANCE & STABILITY                                        -->
+        <!-- ============================================================ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_balance">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7" android:textSize="28sp" android:textStyle="bold" android:textColor="#FFCC80" android:layout_marginRight="4dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginLeft="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_balance_title" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/white" android:letterSpacing="0.03"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_balance_sub" android:textSize="12sp" android:textColor="@color/white_alpha" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_soon" android:textSize="10sp" android:textColor="@color/color_warning" android:background="@drawable/badge_bg_orange" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#22FFFFFF" android:layout_marginTop="14dp" android:layout_marginBottom="14dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_primary_goal" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_balance_goal" android:textSize="13sp" android:textColor="@color/white" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:textStyle="italic"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_what_test" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#FFCC80" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/balance_test1" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#FFCC80" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/balance_test2" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <Button android:layout_width="match_parent" android:layout_height="46dp" android:text="@string/label_coming_soon" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/text_secondary" android:backgroundTint="@color/card_info" android:layout_marginTop="16dp" android:stateListAnimator="@null" android:clickable="false" android:focusable="false" android:alpha="0.6"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ============================================================ -->
+        <!-- 8. REACTION & COORDINATION                                    -->
+        <!-- ============================================================ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_reaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_reaction">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8" android:textSize="28sp" android:textStyle="bold" android:textColor="#EF9A9A" android:layout_marginRight="4dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginLeft="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_reaction_title" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/white" android:letterSpacing="0.03"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_reaction_sub" android:textSize="12sp" android:textColor="@color/white_alpha" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_soon" android:textSize="10sp" android:textColor="@color/color_warning" android:background="@drawable/badge_bg_orange" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#22FFFFFF" android:layout_marginTop="14dp" android:layout_marginBottom="14dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_primary_goal" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cat_reaction_goal" android:textSize="13sp" android:textColor="@color/white" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:textStyle="italic"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_what_test" android:textSize="9sp" android:letterSpacing="0.15" android:textColor="@color/text_secondary" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#EF9A9A" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reaction_test1" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#EF9A9A" android:textSize="13sp" android:layout_marginRight="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reaction_test2" android:textColor="@color/white_alpha" android:textSize="13sp"/>
+                </LinearLayout>
+                <Button android:layout_width="match_parent" android:layout_height="46dp" android:text="@string/label_coming_soon" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/text_secondary" android:backgroundTint="@color/card_info" android:layout_marginTop="16dp" android:stateListAnimator="@null" android:clickable="false" android:focusable="false" android:alpha="0.6"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
